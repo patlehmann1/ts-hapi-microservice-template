@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "module": "CommonJs",
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "outDir": "./built",
+    "pretty": true,
+    "skipLibCheck": true,
+    "strictNullChecks": true,
+    "target": "es6"
+  },
+  "include": ["./src/**/*"],
+  "exclude": [
+    "./node_modules/**/*",
+    "./node_modules/**/**",
+    "./jest.config.js",
+    "./src/utility/jsdoc.js"
+  ]
+}

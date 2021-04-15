@@ -1,0 +1,22 @@
+{
+  "name": "svelte-to-do",
+  "version": "1.0.0",
+  "description": "A simple to-do app created with node.js, hapi.js, mongodb and svelte",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/patlehmann1/svelte-to-do.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/patlehmann1/svelte-to-do/issues"
+  },
+  "homepage": "https://github.com/patlehmann1/svelte-to-do#readme",
+  "dependencies": {
+    "@hapi/hapi": "^20.1.2"
+  }
+}
