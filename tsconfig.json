@@ -1,23 +1,43 @@
 {
+  "compileOnSave": true,
   "compilerOptions": {
     "allowJs": true,
     "esModuleInterop": true,
+    "module": "CommonJS",
     "moduleResolution": "node",
-    "module": "CommonJs",
     "noImplicitAny": true,
     "noImplicitReturns": true,
     "noImplicitThis": true,
-    "outDir": "./built",
+    "outDir": "./dist",
     "pretty": true,
+    "resolveJsonModule": true,
     "skipLibCheck": true,
     "strictNullChecks": true,
-    "target": "es6"
+    "target": "esnext",
+    "baseUrl": ".",
+    "paths": {
+      "@src/*": [
+        "./src/*"
+      ]
+    },
+    "rootDirs": [
+      "./src"
+    ],
+    "rootDir": "./"
   },
-  "include": ["./src/**/*"],
   "exclude": [
     "./node_modules/**/*",
-    "./node_modules/**/**",
-    "./jest.config.js",
-    "./src/utility/jsdoc.js"
-  ]
+    "./node_modules/**/**"
+  ],
+  "include": [
+    "./src/**/*.ts"
+  ],
+  "ts-node": {
+    "files": true
+  },
+  "typedocOptions": {
+    "entryPoints": ["./src"],
+    "exclude": ["**/__tests__/*.test.ts"],
+    "out": "./docs"
+  }
 }
