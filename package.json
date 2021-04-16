@@ -1,7 +1,7 @@
 {
-  "name": "svelte-to-do",
+  "name": "ts-bootstrap-personal-project",
   "version": "1.0.0",
-  "description": "A simple to-do app created with node.js, hapi.js, mongodb and svelte",
+  "description": "This is a template for creating REST APIs with hapi and typescript",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
