@@ -1,6 +1,6 @@
 import Hapi from '@hapi/hapi';
 
-import routes from '../src/routes/index';
+import routes from './routes';
 
 const init = async () => {
 

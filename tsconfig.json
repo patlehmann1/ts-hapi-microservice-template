@@ -3,7 +3,7 @@
   "compilerOptions": {
     "allowJs": true,
     "esModuleInterop": true,
-    "module": "CommonJS",
+    "module": "commonjs",
     "moduleResolution": "node",
     "noImplicitAny": true,
     "noImplicitReturns": true,
@@ -13,17 +13,8 @@
     "resolveJsonModule": true,
     "skipLibCheck": true,
     "strictNullChecks": true,
-    "target": "esnext",
+    "target": "es6",
     "baseUrl": ".",
-    "paths": {
-      "@src/*": [
-        "./src/*"
-      ]
-    },
-    "rootDirs": [
-      "./src"
-    ],
-    "rootDir": "./"
   },
   "exclude": [
     "./node_modules/**/*",
