@@ -31,8 +31,8 @@ const options = { relativeTo: __dirname };
  */
  module.exports = async () => {
     const server = await Glue.compose(manifest, options);
-  
-    await server.start();
+
+    await server.start();  
 
     return server;
   };

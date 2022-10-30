@@ -4,6 +4,8 @@
   "description": "This is a template for creating REST APIs with hapi and typescript",
   "main": "index.js",
   "scripts": {
+    "build": "tsc",
+    "build:watch": "tsc --watch",
     "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "types": "npx ts-node ./src/utility/types.ts"
@@ -22,6 +24,7 @@
     "@hapi/glue": "^8.0.0",
     "@hapi/hapi": "^20.1.2",
     "convict": "^6.0.1",
+    "dotenv": "^16.0.3",
     "fast-safe-stringify": "^2.0.7",
     "hapi-pino": "^8.3.0",
     "joi-to-typescript": "^1.11.0",
@@ -43,6 +46,6 @@
     "eslint-plugin-lodash-fp": "^2.2.0-a1",
     "eslint-plugin-node": "^8.0.1",
     "eslint-plugin-sort-destructure-keys": "^1.2.0",
-    "typescript": "^4.2.4"
+    "typescript": "^4.8.4"
   }
 }
