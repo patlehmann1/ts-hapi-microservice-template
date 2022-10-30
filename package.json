@@ -4,6 +4,7 @@
   "description": "This is a template for creating REST APIs with hapi and typescript",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "types": "npx ts-node ./src/utility/types.ts"
   },
@@ -28,6 +29,7 @@
     "ts-node": "^9.1.1"
   },
   "devDependencies": {
+    "@types/hapi__glue": "^6.1.5",
     "@types/hapi__hapi": "^20.0.7",
     "@types/node": "^14.17.26",
     "eslint": "^5.15.1",

@@ -1,31 +1,38 @@
-import Hapi from '@hapi/hapi';
-
+import Glue from '@hapi/glue';
 import routes from './routes';
 
-const init = async () => {
-
-    const server = Hapi.server({
-        port: 3000,
-        host: 'localhost'
-    });
-
-    server.route(Object.values(routes));
-
-    await server.register({
-        plugin: require('hapi-pino'),
-        options: {
-          prettyPrint: process.env.NODE_ENV !== 'production',
-          redact: ['req.headers.authorization']
-        }
-    })
-
-    await server.start();
+const manifest = {
+    server: {
+        host: process.env.API_HOST ?? 'localhost',
+        port: process.env.API_PORT ?? 3000
+    },
+    register: {
+        plugins: [
+            routes,
+            {
+                plugin: require('hapi-pino'),
+                options: {
+                    prettyPrint: process.env.NODE_ENV !== 'production',
+                    redact: ['req.headers.authorization']
+                }
+            }
+        ]
+    }
 };
 
-process.on('unhandledRejection', (err) => {
+const options = { relativeTo: __dirname };
 
-    console.log(err);
-    process.exit(1);
-});
+/**
+ * @async
+ * @function startServer
+ * @memberof Server
+ * @description starts the Hapi server
+ * @returns {HapiServer}
+ */
+ module.exports = async () => {
+    const server = await Glue.compose(manifest, options);
+  
+    await server.start();
 
-export default init;
+    return server;
+  };
